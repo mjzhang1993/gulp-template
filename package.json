@@ -1,0 +1,35 @@
+{
+  "name": "official",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "run": "gulp run",
+    "build": "cross-env NODE_ENV='production' gulp build",
+    "build-test": "cross-env NODE_ENV='production' gulp build-test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.6",
+    "gulp-changed": "^2.0.0",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-md5-assets": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}
