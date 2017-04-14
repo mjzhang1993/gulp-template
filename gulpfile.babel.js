@@ -21,7 +21,7 @@ const config = require('./config/pluginConfig');
 // 转移 html
 gulp.task('move-html', () => {
 	return gulp
-		.src('./app/*.html')
+		.src('./app/**/*.html')
 		.pipe(changed('./dev'))
 		.pipe(gulp.dest('./dev'));
 })
@@ -29,7 +29,7 @@ gulp.task('move-html', () => {
 // 压缩 html
 gulp.task('minify-html', ['move-html'], () => {
 	return gulp
-		.src('./dev/*.html')
+		.src('./dev/**/*.html')
 		.pipe(htmlmin(config.htmlmin))
 		.pipe(gulp.dest('./build'))
 		.pipe(md5(10));
@@ -51,7 +51,7 @@ gulp.task('minify-css', ['sass'], () => {
 		.src('./dev/styles/**/*.css')
 		.pipe(cleanCSS(config.cleanCSS))
 		.pipe(gulp.dest('./build/styles'))
-		.pipe(md5(10, './build/*.html'));
+		.pipe(md5(10, './build/**/*.html'));
 })
 
 // 编译 js
@@ -74,7 +74,7 @@ gulp.task('minify-js', ['babel-js'], () => {
 		.src('./dev/scripts/**/*.js')
 		.pipe(uglify(config.uglify))
 		.pipe(gulp.dest('./build/scripts'))
-		.pipe(md5(10, './build/*.html'));
+		.pipe(md5(10, './build/**/*.html'));
 })
 
 // 转移图片
@@ -119,7 +119,7 @@ gulp.task('move-libs-dev', () => {
 gulp.task('move-libs-build', () => {
 	return gulp.src('./app/libs/**/*')
 		.pipe(gulp.dest('./build/libs'))
-		.pipe(md5(10, './build/*.html'))
+		.pipe(md5(10, './build/**/*.html'))
 })
 
 // 清空文件
@@ -153,7 +153,7 @@ gulp.task('run', () => {
 	gulp.watch('./app/scripts/**/*.js', ['babel-js']);
 	gulp.watch('./app/imgs/**/*.{png,jpg,gif,ico}', ['move-img']);
 	gulp.watch('./app/_data/*.json', ['move-json']);
-	gulp.watch('./app/*.html', ['move-html']).on('change', reload);
+	gulp.watch('./app/**/*.html', ['move-html']).on('change', reload);
 })
 
 // 压缩输出

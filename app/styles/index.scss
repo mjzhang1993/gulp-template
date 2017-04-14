@@ -1,150 +1,55 @@
-/* 全局样式 */
+/* home页样式 */
 @import "common";
 
-a,
-aside,
-body,
-dd,
-div,
-dl,
-dt,
-figcaption,
-figure,
-footer,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-html,
-img,
-li,
-mark,
-p,
-section,
-span,
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-dd,
-dl,
-dt,
-li,
-ol,
-ul {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-}
-
-img {
-	border: none;
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	height: 0;
-	visibility: hidden;
-}
-.flexh{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.flexv{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-html {
+body{
 	width: 100%;
-	font-size: 625%;
-}
-
-body {
-	width: 100%;
-	background-color: #ffffff;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 0.16rem;
-	font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-	overflow-x: hidden;
-}
-
-/* 咨询图标 */
-.float{
-	position: fixed;
-	z-index: 200;
-	right: .1rem;
-	top: 50%;
-	transform: translateY(-50%);
-	width: .4rem;
-	height: 1rem;
-	background: url('../imgs/mobial/refer_mobile.png');
-	background-size: 100% 100%;
-}
-
-/* 测试 部分 */
-.box{
-	margin: 50px auto;
-	width: 500px;
-	height: 500px;
-	border: 2px solid red;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#header{
-	height: 50px;
-	width: 100%;
-	text-align: right;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	background: #eee;
 	font-size: 40px;
-	background-color: #fff;
-	display: flex;
-	justify-content: center;
-	.btn{
-		height: 100%;
-		width: 30%;
-		border: $br;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		button{
-			height: 40px;
-			width: 40%;
-			font-size: 20px;
+	@include flexh;
+}
 
-		}
+
+.home-container{
+	width: 80%;
+	height: auto;
+	background: #333;
+	color: #fff;
+	@include flexv;
+	padding: 30px;
+	border-radius: 5px;
+	transition: all .3s ease;
+	&>a{
+		color: #ccc;
+		text-decoration: none;
+		display: block;
+		padding: 10px;
+		background: #666;
+		border-radius: 10px;
+		margin: 10px 0;
+		transition: all .3s ease;
+	}
+	.btn{
+		display: block;
+		font-size: 30px;
+		border: none;
+		background: #eee;
+		color: #666;
+		border-radius: 10px;
+		outline: none;
+		cursor: pointer;
+		transition: all .3s ease;
 	}
 }
-#fullpageMenu{
-	width: 68%;
-	height: 100%;
-	border: $bb;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	li{
-		height: 100%;
-		width: 20%;
-		color: #333;
+
+.home-page-bgchange{
+	background: #fff;
+	color: #333;
+	&>a{
+		color: #eee;
+		background: #333;
+	}
+	.btn{
+		color: #ccc;
+		background: #666;
 	}
 }
