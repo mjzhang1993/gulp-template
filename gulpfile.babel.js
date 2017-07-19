@@ -62,7 +62,8 @@ gulp.task('babel-js', () => {
 		.pipe(eslint.format())
 		.pipe(changed('./dev/scripts'))
 		.pipe(babel({
-			presets: ['es2015', 'stage-1']
+			presets: ['es2015', 'stage-0'],
+			plugins: ['transform-decorators-legacy']
 		}))
 		.pipe(gulp.dest('./dev/scripts'))
 		.pipe(reload({stream: true}));

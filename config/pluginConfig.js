@@ -14,8 +14,8 @@ exports.htmlmin = {
 
 exports.autofx = {
    browsers: [
-      'ie >= 9',
-      'ie_mob >= 10',
+      'ie >= 8',
+      'ie_mob >= 8',
       'ff >= 30',
       'chrome >= 34',
       'safari >= 7',
@@ -35,6 +35,7 @@ exports.cleanCSS = {
 
 exports.uglify = {
    mangle: {
-      except: ['require', 'exports', 'module', '$']
+      // except: ['require', 'exports', 'module', '$']
+      reserved: ['require', 'exports', 'module', '$']
    }
 };
