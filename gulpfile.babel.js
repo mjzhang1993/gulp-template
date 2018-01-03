@@ -6,6 +6,8 @@ const autofx = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const eslint = require('gulp-eslint');
 const babel = require('gulp-babel');
+const babelify = require('babelify');
+const bro = require('gulp-bro');
 const uglify = require('gulp-uglify');
 // const imagemin = require('gulp-imagemin');
 // const cache = require('gulp-cache');
@@ -61,10 +63,8 @@ gulp.task('babel-js', () => {
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(changed('./dev/scripts'))
-		.pipe(babel({
-			presets: ['es2015', 'stage-0'],
-			plugins: ['transform-decorators-legacy']
-		}))
+		// .pipe(babel())
+		.pipe(bro({transform: ["babelify"]}))
 		.pipe(gulp.dest('./dev/scripts'))
 		.pipe(reload({stream: true}));
 })

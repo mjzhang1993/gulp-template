@@ -1,0 +1,19 @@
+{
+   "presets": [
+      ["env", {
+         "targets": {
+            "node": "current",
+            "browsers": ["> 1%"]
+         }
+      }], "stage-0"
+   ],
+   "plugins": [
+      ["transform-runtime", {
+         "helpers": false,
+         "polyfill": true,
+         "regenerator": true,
+         "moduleName": "babel-runtime"
+      }],
+      "transform-decorators-legacy"
+   ]
+}

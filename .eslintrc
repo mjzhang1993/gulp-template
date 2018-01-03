@@ -6,7 +6,8 @@
   "extends": "eslint:recommended",
   "parser": "babel-eslint",
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "experimentalDecorators": 0
   },
   "globals": {
      "Swiper": true,
