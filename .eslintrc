@@ -1,17 +1,17 @@
 {
-  "env": {
-    "es6": true,
-    "browser": true
-  },
-  "extends": "eslint:recommended",
-  "parser": "babel-eslint",
-  "rules": {
-    "no-console": 0,
-    "experimentalDecorators": 0
-  },
-  "globals": {
-     "Swiper": true,
-     "$": true,
-     "jquery": true
-    }
+   "env": {
+      "es6": true,
+      "browser": true
+   },
+   "extends": "eslint:recommended",
+   "parser": "babel-eslint",
+   "rules": {
+      "no-console": 0,
+      "experimentalDecorators": 0
+   },
+   "globals": {
+      "Swiper": true,
+      "$": true,
+      "jquery": true
+   }
 }

@@ -1,55 +1,54 @@
 /* home页样式 */
-@import "common";
+@import 'common';
 
-body{
-	width: 100%;
-	background: #eee;
-	font-size: 40px;
-	@include flexh;
+body {
+   width: 100%;
+   background: #eee;
+   font-size: 40px;
+   @include flexh;
 }
 
-
-.home-container{
-	width: 80%;
-	height: auto;
-	background: #333;
-	color: #fff;
-	@include flexv;
-	padding: 30px;
-	border-radius: 5px;
-	transition: all .3s ease;
-	&>a{
-		color: #ccc;
-		text-decoration: none;
-		display: block;
-		padding: 10px;
-		background: #666;
-		border-radius: 10px;
-		margin: 10px 0;
-		transition: all .3s ease;
-	}
-	.btn{
-		display: block;
-		font-size: 30px;
-		border: none;
-		background: #eee;
-		color: #666;
-		border-radius: 10px;
-		outline: none;
-		cursor: pointer;
-		transition: all .3s ease;
-	}
+.home-container {
+   width: 80%;
+   height: auto;
+   background: #333;
+   color: #fff;
+   @include flexv;
+   padding: 30px;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+   & > a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      background: #666;
+      border-radius: 10px;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+   }
+   .btn {
+      display: block;
+      font-size: 30px;
+      border: none;
+      background: #eee;
+      color: #666;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+   }
 }
 
-.home-page-bgchange{
-	background: #fff;
-	color: #333;
-	&>a{
-		color: #eee;
-		background: #333;
-	}
-	.btn{
-		color: #ccc;
-		background: #666;
-	}
+.home-page-bgchange {
+   background: #fff;
+   color: #333;
+   & > a {
+      color: #eee;
+      background: #333;
+   }
+   .btn {
+      color: #ccc;
+      background: #666;
+   }
 }

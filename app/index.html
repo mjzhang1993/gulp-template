@@ -16,7 +16,15 @@
          <button class="btn">change background-color</button>
       </div>
       <script type="text/javascript">
-        
+         if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+               navigator.serviceWorker.register('./sw.js').then(registration => {
+                  console.log('SW registered: ', registration);
+               }).catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+               });
+            });
+         }
       </script>
       <script src="./libs/jquery-3.2.1.min.js" charset="utf-8"></script>
       <script src="./scripts/index.js" charset="utf-8"></script>

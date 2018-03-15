@@ -1,30 +1,28 @@
 /* home页样式 */
-@import "common";
+@import 'common';
 
-body{
-	width: 100%;
-	background: #eee;
-	font-size: 40px;
-	@include flexh;
+body {
+   width: 100%;
+   background: #eee;
+   font-size: 40px;
+   @include flexh;
 }
 
-
-.aboutus-container{
-	width: 80%;
-	height: auto;
-	background: #333;
-	color: #fff;
-	@include flexv;
-	padding: 30px;
-	border-radius: 5px;
-	&>a{
-		color: #ccc;
-		text-decoration: none;
-		display: block;
-		padding: 10px;
-		background: #666;
-		border-radius: 10px;
-		margin: 10px 0;
-	}
-
+.aboutus-container {
+   width: 80%;
+   height: auto;
+   background: #333;
+   color: #fff;
+   @include flexv;
+   padding: 30px;
+   border-radius: 5px;
+   & > a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      background: #666;
+      border-radius: 10px;
+      margin: 10px 0;
+   }
 }
